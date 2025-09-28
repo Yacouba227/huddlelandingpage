@@ -1,0 +1,452 @@
+/* General Styles */
+:root {
+    --Pink: hsl(322, 100%, 66%);
+    --Light-Pink: hsl(322, 100%, 98%);
+    --Light-Red: hsl(0, 100%, 63%);
+    --Dark-Cyan: hsl(192, 100%, 9%);
+    --Grayish-Blue: hsl(208, 11%, 55%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: var(--Dark-Cyan);
+    width: 100%; /* Ensure body takes full width */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+h1,
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--Dark-Cyan);
+}
+
+p {
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+    padding: 15px 40px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 700;
+    transition: opacity 0.2s ease;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Header */
+header {
+    background-image: url('images/bg-hero-desktop.svg');
+    background-color: var(--Light-Pink);
+    background-size: cover;
+    background-position: center;
+    padding: 30px 60px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+nav img {
+    width: 200px;
+    max-width: 100%;
+}
+
+.try-it-free {
+    background-color: #fff;
+    color: var(--Dark-Cyan);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 30px; /* Adjusted for better proportion */
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    text-align: left; /* Default text alignment */
+}
+
+.hero-text {
+    max-width: 50%;
+    margin-right: 50px;
+    flex: 1 1 45%; /* Flexible sizing */
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    margin-bottom: 30px;
+}
+
+.get-started-free {
+    background-color: var(--Pink);
+    color: #fff;
+    font-size: 1.1em;
+    padding: 15px 50px;
+}
+
+.hero-image {
+    flex: 1 1 45%; /* Flexible sizing */
+    text-align: center;
+}
+
+/* Main Content */
+main {
+    padding: 0 60px;
+}
+
+.feature-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin: 40px 0;
+    padding: 50px;
+    flex-wrap: wrap; /* Allow content to wrap */
+}
+
+.feature-block .text-content {
+    max-width: 50%;
+    flex: 1 1 45%; /* Flexible sizing */
+}
+
+.feature-block h2 {
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+.feature-block p {
+    color: var(--Grayish-Blue);
+}
+
+.feature-block .image-content {
+    max-width: 40%;
+    flex: 1 1 45%; /* Flexible sizing */
+    text-align: center;
+}
+
+.flowing-conversations {
+    flex-direction: row-reverse;
+}
+
+.call-to-action {
+    text-align: center;
+    padding: 100px 0;
+    width: 700px;
+    max-width: 90%; /* Max width for responsiveness */
+    height: 300px;
+    /* border: 1px solid; Remove placeholder border */
+    border-radius: 50px;
+    position: relative;
+    left: 50%; /* Center the element */
+    transform: translateX(-50%); /* Center the element */
+    z-index: 2;
+    background-color: #fff; /* Changed from aliceblue */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Added shadow */
+    margin-top: 100px; /* Adjusted margin-top */
+}
+
+.call-to-action h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--Dark-Cyan);
+    color: #fff;
+    padding: 150px 60px 30px;
+    margin-top: -100px;
+    position: relative; /* To contain absolute positioned elements if any */
+    z-index: 1; /* Ensure footer is below CTA */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-content2 {
+    display: flex;
+    justify-content: space-between;
+    flex: 1; /* Allow content2 to take available space */
+    flex-wrap: wrap; /* Allow content to wrap */
+    gap: 30px;
+}
+
+.footer-logo {
+    filter: brightness(0) invert(1);
+    margin-bottom: 20px;
+    width: 150px;
+}
+
+.contact-info,
+.footer-links,
+.social-media {
+    width: auto; /* Allow natural width */
+    min-width: 200px; /* Ensure minimum width for stacking */
+    flex: 1 1 250px; /* Flexible sizing for columns */
+}
+
+.contact-info p {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.contact-info p img {
+    margin-right: 15px;
+    width: 20px;
+    margin-top: 5px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin-right: 0; /* Remove fixed margin */
+}
+
+.footer-links ul li {
+    margin-bottom: 15px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: underline 0.2s ease;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+    color: var(--Pink);
+}
+
+.social-media {
+    display: flex;
+    justify-content: flex-start; /* Align social icons to start */
+    gap: 15px; /* Add gap between icons */
+    margin-top: 20px; /* Add some top margin */
+}
+
+.social-media a {
+    color: #fff;
+    font-size: 1.2em; /* Adjusted size */
+    border: 1px solid #fff; /* Added border */
+    border-radius: 50%;
+    width: 35px; /* Fixed width */
+    height: 35px; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.social-media a:hover {
+    color: var(--Pink);
+    border-color: var(--Pink);
+}
+
+.copyright {
+    text-align: right;
+    font-size: 0.8em;
+    margin-top: 30px; /* Adjusted margin */
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+
+    .feature-block h2 {
+        font-size: 2em;
+    }
+
+    .call-to-action {
+        width: 80%;
+    }
+}
+
+@media (max-width: 769px) {
+    header {
+        padding: 20px 30px;
+        background-image: url('images/bg-hero-mobile.svg');
+        text-align: center;
+    }
+
+    nav {
+        margin-bottom: 30px;
+        flex-direction: column; /* Stack nav items */
+        gap: 15px;
+    }
+
+    nav img {
+        width: 120px;
+    }
+
+    .try-it-free {
+        padding: 8px 25px;
+        font-size: 0.8em;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .get-started-free {
+        font-size: 0.9em;
+        padding: 10px 30px;
+    }
+
+    main {
+        padding: 0 20px;
+    }
+
+    .feature-block {
+        flex-direction: column-reverse;
+        text-align: center;
+        margin: 30px 0;
+        padding: 30px;
+    }
+
+    .feature-block .text-content,
+    .feature-block .image-content {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .feature-block .image-content {
+        margin-bottom: 30px;
+    }
+
+    .flowing-conversations {
+        flex-direction: column-reverse;
+    }
+
+    .call-to-action {
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 50px 0; /* Adjusted padding */
+        height: auto; /* Auto height for content */
+    }
+
+    .call-to-action h2 {
+        font-size: 1.5em;
+    }
+
+    footer {
+        padding: 130px 30px 20px;
+        text-align: center; /* Center align footer content */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-content2 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-info,
+    .footer-links,
+    .social-media {
+        min-width: unset;
+        width: 100%;
+        flex: none;
+        text-align: center; /* Center align text content */
+    }
+
+    .contact-info p {
+        justify-content: center; /* Center align icons and text */
+        align-items: center;
+    }
+
+    .footer-links ul {
+        margin: 0;
+        text-align: center;
+    }
+
+    .social-media {
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .copyright {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.5em;
+    }
+
+    .hero-text p {
+        font-size: 0.9em;
+    }
+
+    .feature-block h2 {
+        font-size: 1.5em;
+    }
+
+    .feature-block p {
+        font-size: 0.9em;
+    }
+
+    .get-started-free {
+        font-size: 0.8em;
+        padding: 8px 25px;
+    }
+
+    .try-it-free {
+        font-size: 0.7em;
+        padding: 6px 20px;
+    }
+}
