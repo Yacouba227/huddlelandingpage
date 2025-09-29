@@ -21,6 +21,11 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+.container-content{
+    max-width: 1440px;
+    margin: auto;
+}
+
 h1,
 h2 {
     font-family: 'Poppins', sans-serif;
